@@ -24,9 +24,9 @@
 
       <div class="title">
         <!-- Project Title & Team Name -->
-        <h1 class="titletext">StraySpace</h1>
+        <h1 class="titletext">StraySpace by Compass Nuggets</h1>
         <!-- Project 1-liner – max 140 characters. -->
-        <h3 class="tagline">A collaborative large motion interaction designed to bring out your altruistic nature. Help guide the animal spirit friends towards the portal to bring them home.</h3>
+        <h3 class="tagline">A collaborative large motion interaction designed to bring out your altruistic nature. Will you be brave enough to help the helpless?.</h3>
       </div>
     </header>
     
@@ -57,7 +57,8 @@
           <h3><span class="label">Technology Used</span></h3>
           <ul class="nodot">
               <li class="tech">Unity</li>
-              <li class="tech">Arduino</li>
+              <li class="tech">Arduino Libraries</li>
+              <li class="tech">Arduino Leonardo boards</li>
               <li class="tech">Adafruit Neopixels</li>
               <li class="tech">PIR sensors</li>
               <li class="tech">Motor controllers</li>
@@ -89,6 +90,13 @@
 
         <!-- Project Description – 150 - 300 words describing what the project is and the intended experience. -->
         <p>Minimum 250 - maximum 500 word description of your project! In particular, each team is required to produce a ‘Kickstarter’ or ‘Explainer’ video to explain the project. This video provides a method of explaining the application, the human values supported by the application, and the experience you are seeking to create with the prototype. The video is also useful as a ‘Plan B’ if something goes wrong with your exhibition and will be used in case of COVID restrictions. </p>
+        <p>StraySpace is an engaging creepy experience that brings out your altruistic traits by introducing abstract creatures (Animal Spirit Friends, ASFs for short). The ASFs have become lost on earth and require help from you to guide them back home! The only way to help the ASFs is to perform large motions in front of screaming windmills; otherworldly structures that “scream” when activated.</p>
+        <p>It is up to you earthlings to successfully activate and maintain the windmills to guide the ASFs towards the portal in the centre and send them home, as all must be simultaneously active for a certain amount of time for the ASFs to be saved. The windmills will get louder if they sense your approach to success, so it will get more difficult to cooperate with your comrades. Are you able to help the helpless in the midst of all the chaos? Or will it be too much to handle? </p>
+
+        <p>The installation requires 3 brave earthlings to interact with the windmills in order to save the ASFs. Two earthlings will help guide individual creatures on the left and right of the display, while the remaining earthling is responsible for opening the portal. You may notice the lights at each windmill post. They will help guide you to make the right motions that the windmill wants to see. </p>
+
+        <p>Our project’s creepy aspect was inspired by Fokkinga and A. Desmet while our altruistic and collaborative components were informed by Ale, Brown &amp; Sullivan. Beat Saber, Avatar and Wouters et. al influenced the large motions for user interactions and the need for windmills.Characters from Studio Ghibli, Pokemon, and various children’s toys and media inspired the need for cute and otherwordly creatures. Technological windmills by HomeMadeGarbage, Guerri and ProgramminginArduino inspired our design for the windmills.</p>
+
 
 
 		<!-- Image gallery for images of the concept - sketches, photos etc -->
@@ -120,7 +128,13 @@
         </div>
         
         <h3>Technical Development &amp; Construction</h3>
-        <p>Maximum 500 words describing the implementation & technical specifications of your project.</p>
+        <p>
+            The windmill contraptions are composed of a drill attached to a motor controller, controlled by an Arduino Leonardo microcontroller which has an ultrasonic distance sensor and a Passive Infrared (PIR) motion sensor attached as input. When a user makes a large motion that satisfies the windmill, the speed of the windmill will increase. Adafruit Neopixel strips are attached to the acrylic panel of the windmill mounting box to provide further visual feedback to the user of whether their motions satisfy the windmill. To make the windmill blades and allow it to spin, we covered EVA foam with metallic fabric and zip tied it to a wooden centrepiece. This wooden piece attaches to a drill via a threaded rod with washers and nylon nuts on either side to keep the blades secure.</p>
+        
+        <p>
+            We used plywood to make boxes to sit all of the components in so that users only have to see the blades on the outside and put a repurposed frosted acrylic panel at the front to allow for the lights to diffuse through to the outside. Not only does this protect the components from inquisitive minds, but also reduces the effect of the elements as all the critical connections are contained. To mount the boxes to the existing bridge pillars, we used galvanised threaded rods bent into U-shapes, washers and nuts. 2 of these U-shape rods support each windmill-box. </p>
+        <p>
+            The visual display with the ASFs is a 2D game that was created through Unity. The background and creatures were designed using various Adobe Creative Cloud Apps, mainly Adobe Fresco and Adobe Illustrator. The way that the Arduino connects with the Unity game is by having keypress listeners in the unity game to look out for W, A and D keypresses. These keypresses correspond to a different windmill for each and will either move one of the creatures towards the portal, or keep the portal open so that the ASFs can make it back to their home. The A keypress is linked to the windmill on the left and controls the ASF on the left of the display. If the user is doing the correct motion, the ASF will move towards the portal, otherwise it will fade out of existence and get lost forever. The D keypress does the same but on the opposite side. The W keypress will open the portal, and is activated when users are doing the correct motion in front of the W windmill. The simplicity of connecting the arduino to unity as a keypress is the main reason we used Arduino Leonardo over Arduino Uno boards. Other solutions we explored were mostly out of stock and involved a much steeper learning curve. The only main difference in form between Uno and Leonardo boards is that the connection to the board is MicroUSB instead of USB type-B, which allowed us to easily transfer from one board to another. </p>
         
         
 		<!-- Image gallery for images of the technical development and construction of your project -->
